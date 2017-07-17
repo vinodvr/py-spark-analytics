@@ -18,5 +18,6 @@ ratingsHistogram = movieRatingsRDD \
                 .reduceByKey(lambda a, b: a + b) \
                 .collect()
 
-print('Rating distribution is', ratingsHistogram)
+print('\nRating distribution is for movie Godfather', ratingsHistogram)
+print('\n')
 

@@ -21,7 +21,9 @@ query = "SELECT movie_id, count(rating) as cnt FROM movie_ratings GROUP BY movie
 top_rated = spark.sql(query)
 
 # The results of SQL queries are RDDs and support all the normal RDD operations.
+print('Most rated movies are:\n')
 for top_movie in top_rated.collect():
   print(top_movie)
   
+print('\n')
 spark.stop()

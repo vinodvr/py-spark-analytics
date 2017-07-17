@@ -14,6 +14,6 @@ result = ratingsRDD.countByValue()
 
 # print out the results
 sortedResults = collections.OrderedDict(sorted(result.items()))
-print('Rating Count')
+print('\nRating Count')
 for key, value in sortedResults.items():
     print("%s %i" % (key, value))
